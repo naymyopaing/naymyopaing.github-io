@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>namenemail</title>
+</head>
+<style>table,td,th{border:groove;}
+.b1{background-color: #4CAF50;}
+.b2{background-color: #f44336;}
+</style>
+<body>
+<tr>
+<h3>Name: <input id="101"></input><h3>
+<tr>
+<h3>Email: <input id="102"></input>&nbsp &nbsp &nbsp
+<button class="b1" onclick="add()">add
+</button> 
+<button class="b2" onclick="remove()">remove
+</button>
+<h3>
+<table id="103">
+<tr>
+<th width="200">number</th>
+<th width="200">name</th>
+<th width="200">email</th>
+</tr></table>
+<script>
+let name = document.getElementById("101");
+let email = document.getElementById("102");
+let result = document.getElementById("103");
+let number1 = 1;
+function add(){result.innerHTML+=
+`<tr><th>${number1++}</th>
+<th>${name.value}</th>
+<th>${email.value}</th><tr>`}
+function remove(){result.deleteRow(1)}
+</script>
+</body>
+</html>

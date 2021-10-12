@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<style>.text1{color: #ffaa00;}
+.b1{border-radius: 50%;
+    width: 23px;
+    background-color: #2fff00;}
+</style>
+<head>
+<title>calculator test</title>
+</head>
+<body>
+
+<h1 class="text1">Calculator</h1>
+<h3><input name="number" size="10" id="101">&nbsp</input>
+<input name="operator" style="width :10px" id="102"></input>&nbsp
+<input name="number"size="10" id="103"></input>
+<button class="b1" onclick="c1()">=</button></h3>
+<h1 id="104"><h1>
+<script>
+let resultshow=document.getElementById("104");
+
+function c1(){
+              var n1=document.getElementById("101").value;
+              var n2=document.getElementById("103").value;
+              let o=document.getElementById("102").value;
+              var ca1= + n1+ +n2;
+              var ca2= n1 - n2;
+              var ca3= n1 * n2;
+              var ca4= n1 / n2;
+              var result;
+              if(o=="+"){result=ca1;}
+              if(o=="-"){result=ca2;}
+              if(o=="x"){result=ca3;}
+              if(o=="/"){result=ca4;}
+              
+              
+              resultshow.innerHTML='the result is '+result;
+              
+              }
+
+
+
+
+
+</script>
+</h3>
+</body>
+</html>
+
+

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Response Time Test</title>
+</head>
+<body style="position:relative;zoom:100%">
+<style>.b{width:70px;
+          height:70px;
+          border-radius:50%;
+          outline:none;
+          background-color:#ff0000;
+          font-size:16px;}
+		 body{font-family: Verdana, sans-serif;}
+		 </style>
+<h1 style="display:none" id="103" font-size="150%";></h1>
+<h1 style="display:none;
+           position:absolute;
+           top:300px;
+           left:650px;" id="104" font-size="150%";>hi</h1>
+<button class=b id="101" onclick="pressed1()"style="position:absolute;
+                                                     top:325px;
+													 right:0px;
+													 left:700px;
+													 bottom:0px;">press to start</button>
+<button class=b id="102" onclick="pressed2()"  style="display:none;
+                                                     position:absolute;
+                                                     top:0px
+                                                     right:0px;
+                                                     left:0px;
+                                                     bottom:-50px;
+                                                     ;"> </button>
+
+<script>
+let button=document.getElementById("101");
+let move=document.getElementById("102");
+let timer=document.getElementById("103");
+let timer2=document.getElementById("104");
+function pressed1(){button.style.display='none';
+                    move.style.display='block';
+					move.style.bottom='0px';
+					move.style.right='0px';
+                    var x=Math.floor((Math.random() * 1200) + 100);
+                    move.style.left=x+'px';
+                    var y=Math.floor((Math.random() * 500) + 100);
+                    move.style.top=y+'px';
+  			    	var startTime = Date.now();
+                    var interval = setInterval
+					(function(){var elapsedTime = Date.now() - startTime;
+                                var r=timer.innerHTML = (elapsedTime / 1000).toFixed(2)+' seconds';
+                                               }, 5);
+											   };
+							   
+function pressed2(){var timer3 =timer.innerText;
+                    move.style.display='none';
+                    timer.style.display='none';
+                    timer2.style.display='block';
+                    timer2.innerHTML =timer3;
+					var w ;
+					w = setTimeout(refresh, 700);
+					 }
+function refresh(){location.reload()};
+
+
+
+
+
+
+
+
+        
+		
+		
+		
+		
+		
+		
+		
+					
+					
+					
+					
+                    
+                   
+                   
+                   
+ 
+</script>
+
+
+</body>
+</html>
+
+

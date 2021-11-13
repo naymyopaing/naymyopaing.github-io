@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>positiveornegative</title>
+</head>
+<body>
+<p>Enter any non-zero Number:
+<input style="width :20px" id="100"></input> &nbsp <button id="101" onclick="b()">Submit</button></p>
+<p id="102"></p>
+<script>
+
+let button=document.getElementById("101").value;
+let result=document.getElementById("102");
+function b(){let number=document.getElementById("100").value;
+             var result1;
+             var po="positive";
+             var ne="negative";
+             if(number > 0){result1=po;}
+             if(number < 0){result1=ne;}
+             result.innerHTML='The number is '+result1;
+}
+
+</script>
+</body>
+</html>
+

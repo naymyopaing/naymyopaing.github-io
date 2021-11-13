@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>pricenquantity</title>
+</head>
+<body>
+<p>Enter item price: <input style="width : 40px" id="101" ></input> </p>
+<p>Enter item quentity: <input style="width : 40px" id="102" ></input>&nbsp &nbsp &nbsp<button id="103" onclick="b()">Submit</button></p>
+<p id="104">Total expense: </p>
+<script>
+function b(){let price=document.getElementById("101").value;
+             let quentity=document.getElementById("102").value;
+             let result=document.getElementById("104");
+             let result1 = quentity*price
+             if (result1 > 5000){let result2=result1*0.1;
+             result1=result1-result2+' (10% off)';
+             }
+             result.innerHTML='Total expense: '+result1;
+             
+}
+</script>
+
+</body>
+</html>

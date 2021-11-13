@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>usernamenpassword</title>
+</head>
+<body>
+<p>Enter username: <input id="101"></input></p>
+<p>Enter password: &nbsp<input id="102"></input>&nbsp&nbsp&nbsp&nbsp<button onclick="b()">Submit</button></p>
+<p id ="103"></p>
+<script>
+function b(){let name=document.getElementById("101").value;
+             let password=document.getElementById("102").value;
+             let result=document.getElementById("103");
+             if((name=="mmit")&&(password=="admin123"))                                     {result.innerHTML="Login success"}
+             else if(name=="mmit"){result.innerHTML="Password is                                              incorrect"}
+             else if(password=="admin123"){result.innerHTML="Username is                                              incorrect"}
+             else {result.innerHTML="Username and password do not match "};
+  
+          }
+</script>
+</body>
+</html>
+
+

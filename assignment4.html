@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>marks</title>
+</head>
+<body>
+<p>Enter mark for Programming: <input id="101"></input></p>
+<p>Enter mark for English: <input id="102"></input></p>
+<p>Enter mark for Math: <input id="103"></input></p>
+<button onclick="b()">Submit</button>
+<p id="104"></p>
+
+<script>
+function b(){let p=+document.getElementById("101").value;
+             let e=+document.getElementById("102").value;
+             let m=+document.getElementById("103").value;
+             let result=document.getElementById("104");
+             var result1,result2,result3,result4,result5;
+             if ((p>e) && (p>m)){result1="Subject that got maximum mark is Programming"};
+            if ((e>p) && (e>m)){result1="Subject that got maximum mark is English"};
+            if ((m>p) && (m>e)){result1="Subject that got maximum mark is Math"};
+             
+             if ((p<e) && (p<m)){result2="Subject that got minimum mark is Programming"};
+             if ((e<p) && (e<m)){result2="Subject that got minimum mark is English"}
+             if((m<e) && (m<p)) {result2="Subject that got minimum mark is Math"};
+             
+             result3="Total mark: "+(+ p+ +e+ + +m);
+             result4="Average mark: "+(+ p+ +e+ + +m)/3;
+             if((p>80)&&(m>80)&&(e>80)){result5="Distinction subjects-Programming,English,Math"}
+             if((p>80)&&(m<80)&&(e<80)){result5="Distinction subjects-Programming"};
+             if((p<80)&&(m<80)&&(e>80)){result5="Distinction subjects-English"};
+             if((p<80)&&(m>80)&&(e<80)){result5="Distinction subjects-Math"};
+             if((p>80)&&(m>80)&&(e<80)){result5="Distinction subjects-Programming,Math"};
+             if((p>80)&&(m<80)&&(e>80)){result5="Distinction subjects-Programming,English"};
+             if((p<80)&&(m>80)&&(e>80)){result5="Distinction subjects-English,Math"};
+
+              result.innerHTML=result1+"<br>"+result2+"<br>"+result3+"<br>"+result4+"<br>"+result5
+             
+             
+            
+             
+
+             
+             
+             
+             
+
+}
+</script>
+</body>
+</html>
+
+
